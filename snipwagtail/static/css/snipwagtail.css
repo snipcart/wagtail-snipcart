@@ -1,0 +1,298 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @maximelaboisson
+ Watch 4
+  Star 15
+ Fork 7 snipcart/snipcart-jekyll-integration
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Branch: gh-pages Find file Copy pathsnipcart-jekyll-integration/_sass/_base.scss
+3dbd3db  on May 25
+@maximelaboisson maximelaboisson Added style to the store
+2 contributors @maximelaboisson @couellet
+RawBlameHistory     269 lines (209 sloc)  3.58 KB
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+.site-title {
+    font-size: 36px;
+    line-height: 56px;
+    color: white;
+    style: bold;
+    letter-spacing: -1px;
+    padding: 15px 15px;
+    align-self: center;
+    margin-bottom: 0;
+    float: left;
+}
+
+.snipcart-checkout:hover{
+  color: #3F51B5;
+  text-decoration: underline;
+}
+
+.snipcart-add-item{
+  background-color: #00695C;
+  font-size: 18px;
+  color: white;
+  border: 0px;
+  border-radius: 3%;
+}
+
+.snipcart-add-item:hover{
+  box-shadow: 0px 3px 5px #888888;
+}
+
+h3 {
+  align-self: center;
+  color: white;
+}
+
+.snipcart-add-item:active{
+  box-shadow: 0 0 0 0;
+}
+
+.product-description{
+  width: 400px;
+  padding: 25px;
+  margin: 25px;
+  background-color: #4DB6AC;
+  font-size: 20px;
+}
+
+.product-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.products{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+}
+
+.product:hover{
+  background-color: #4DB6AC;
+}
+
+
+button{
+  font-family: $base-font-family;
+  font-size: 17px;
+}
+
+/**
+ * Basic styling
+ */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #212121;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: 300;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
+
+
+.thumbnail {
+  width: 200px;
+}
+
+
+a {
+  color: black !important;
+}
+
+a:visited {
+  color: black;
+}
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help

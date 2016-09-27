@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+  {% include "snipcart.html" %}
+
+  <h3>{{ self.name }}</h3>
+
+  <div class="product">
+      <div class="product-details">
+        <img src="{{ self.image }}" alt="{{ self.name }}" class="thumbnail"/>
+        <div class="product-description">
+          <p>{{ self.name }}</p>
+          <p>{{ self.description }}</p>
+
+          <button class="snipcart-add-item"
+            data-item-name="{{ self.name }}"
+            data-item-id="{{ self.sku }}"
+            data-item-image="{{ self.image }}"
+            data-item-url="{{ self.productAt }}"
+            data-item-price="{{ self.price }}"
+            data-item-description="{{ self.description }}">
+            Buy it for {{ self.price }} $
+          </button>
+
+        </div>
+      </div>
+  </div>
+
+{% endblock %}

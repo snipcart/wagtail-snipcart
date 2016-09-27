@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+  {% include "snipcart.html" %}
+
+  <div class="site-title">{{ self.title }}</div>
+
+    <div class="products">
+
+      {% for product in self.get_children.specific %}
+        {% include "product_partial.html" %}
+      {% endfor %}
+
+    </div>
+
+{% endblock %}
